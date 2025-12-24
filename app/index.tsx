@@ -15,6 +15,8 @@ import { Ionicons } from '@expo/vector-icons';
 import { colors, cardColors } from './constants/colors';
 import { images } from './constants/images';
 import { useApp } from './context/AppContext';
+import { Pressable } from 'react-native';
+import { Link } from 'expo-router';
 
 const { width } = Dimensions.get('window');
 const cardWidth = (width - 48) / 2;
@@ -212,13 +214,23 @@ export default function HomeScreen() {
 
         {/* Footer */}
         <View style={styles.footer}>
-          <Text style={[styles.footerText, { fontSize: 11 * multiplier }]}>
-            नेपालका परिवारहरूको लागि बनाइएको
-          </Text>
-          <Text style={[styles.footerSubtext, { fontSize: 10 * multiplier }]}>
-            Made with love for Nepali families
-          </Text>
-        </View>
+  <Text style={[styles.footerText, { fontSize: 11 * multiplier }]}>
+    नेपालका परिवारहरूको लागि बनाइएको
+  </Text>
+  <Text style={[styles.footerSubtext, { fontSize: 10 * multiplier }]}>
+    Made with love for Nepali families
+  </Text>
+
+  {/* Disclaimer Link */}
+  <Link href="/disclaimer" asChild>
+    <Pressable>
+      <Text style={{ color: 'blue', marginTop: 6, fontSize: 12 * multiplier }}>
+        Disclaimer
+      </Text>
+    </Pressable>
+  </Link>
+</View>
+
       </ScrollView>
     </SafeAreaView>
   );
@@ -403,3 +415,4 @@ const styles = StyleSheet.create({
     marginTop: 4,
   },
 });
+

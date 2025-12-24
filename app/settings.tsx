@@ -261,6 +261,25 @@ export default function SettingsScreen() {
             </Text>
           </View>
         </View>
+                        {/* Disclaimer Section */}
+<View style={styles.settingCard}>
+  <Ionicons name="alert-circle" size={24} color={colors.error} />
+  <View style={{ marginTop: 8 }}>
+    <Text style={[styles.disclaimerTitle, { fontSize: 15 * multiplier }]}>
+      Disclaimer
+    </Text>
+    <Text style={[styles.disclaimerText, { fontSize: 13 * multiplier, marginTop: 4 }]}>
+      This app does not replace professional medical diagnosis or treatment. 
+      Please consult qualified healthcare professionals.
+    </Text>
+    <Text style={[styles.disclaimerText, { fontSize: 13 * multiplier, marginTop: 4 }]}>
+  यो एप पेशेवर मेडिकल डायग्नोसिस वा उपचारको विकल्प होइन। 
+  कृपया योग्य स्वास्थ्य पेशेवरसँग परामर्श गर्नुहोस्।
+</Text>
+
+  </View>
+</View>
+
 
         {/* Footer */}
         <View style={styles.footer}>
@@ -511,6 +530,15 @@ const styles = StyleSheet.create({
   helpText: {
     color: colors.textSecondary,
   },
+  disclaimerTitle: {
+  color: colors.textPrimary,
+  fontWeight: '700',
+},
+disclaimerText: {
+  color: colors.textSecondary,
+  lineHeight: 20,
+},
+
   footer: {
     alignItems: 'center',
     paddingTop: 24,
