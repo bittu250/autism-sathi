@@ -1,6 +1,6 @@
 {
   "expo": {
-    "name": "Autism Saathi Nepal",
+    "name": "Autism Saathi",
     "slug": "autism-support-parents",
     "version": "1.0.0",
     "orientation": "portrait",
@@ -8,34 +8,38 @@
     "scheme": "autism-support-parents",
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
+
+    "description": "Supportive and educational app for Nepali families with children on the autism spectrum.",
+
     "ios": {
       "supportsTablet": true
     },
+
     "android": {
+      "package": "com.binayapaudel.autismsupportparents",
       "adaptiveIcon": {
         "foregroundImage": "./assets/images/adaptive-icon.png",
         "backgroundColor": "#ffffff"
       },
-      "edgeToEdgeEnabled": true,
-      "package": "com.binayapaudel.autismsupportparents"
+      "edgeToEdgeEnabled": true
     },
-  
+
     "plugins": [
       "expo-router",
       [
         "expo-splash-screen",
         {
           "image": "./assets/images/splash-icon.png",
-          "imageWidth": 200,
           "resizeMode": "contain",
           "backgroundColor": "#ffffff"
         }
       ]
     ],
-   
+
     "runtimeVersion": {
       "policy": "sdkVersion"
     },
+
     "extra": {
       "router": {},
       "eas": {
